@@ -1,0 +1,48 @@
+{
+  "name": "guardianslabs/repository",
+  "type": "library",
+  "description": "Simple implementation of Active Repository",
+  "keywords": [
+    "GuardiansLabs",
+    "Repository"
+  ],
+  "homepage": "https://github.com/GuardiansLabs/Repository",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mustafa Hussain",
+      "email": "mustafa.hussain93@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php" : "~5.6|~7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit" : "~4.0||~5.0",
+    "squizlabs/php_codesniffer": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "GuardiansLabs\\Repository\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GuardiansLabs\\Repository\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
