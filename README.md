@@ -6,7 +6,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Repository Is A very simple implementation for active repository inspired by rinvex/repository
+Repository Is A very simple implementation for Active Repository 
 ## Install
 
 Via Composer
@@ -41,7 +41,7 @@ Any Pull Requests are Welcome
 ## Credits
 
 - [mustafah15][link-author]
-
+- [contributers]
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
