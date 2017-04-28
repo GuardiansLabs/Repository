@@ -50,7 +50,7 @@ class BaseRepository implements RepositoryContract
      */
     public function createNew(array $data)
     {
-        if (!$data) {
+        if (empty($data)) {
             throw new RepositoryException("No Given Data To Insert");
         }
         $this->model->fill($data);
@@ -80,7 +80,7 @@ class BaseRepository implements RepositoryContract
     public function update($itemId, array $data)
     {
         $item = $this->model->find($itemId);
-        if (!$data) {
+        if (empty($data)) {
             throw new RepositoryException("No Given Data To Update");
         }
         if (!$item) {
