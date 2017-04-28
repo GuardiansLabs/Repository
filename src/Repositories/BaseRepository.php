@@ -16,7 +16,7 @@ use Illuminate\Support\Collection;
 class BaseRepository implements RepositoryContract
 {
 
-    protected $model ;
+    protected $model;
     /**
      * @param Model $model
      * @return object
