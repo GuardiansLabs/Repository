@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace GuardiansLabs\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,7 +13,6 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
     }
 
     /**
