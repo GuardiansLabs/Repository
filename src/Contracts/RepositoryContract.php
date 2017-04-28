@@ -49,9 +49,10 @@ interface RepositoryContract
     public function delete($itemId);
 
     /**
-     * @param $where
-     * @param array $attributes
+     * @param array $where
+     * @param array $columns
      * @return Collection
+     * @internal param array $attributes
      */
-    public function findWhere($where, $attributes = ['*']);
+    public function findWhere(array $where, $columns = ['*']);
 }

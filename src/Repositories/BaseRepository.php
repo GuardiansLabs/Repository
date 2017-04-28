@@ -12,7 +12,6 @@ use GuardiansLabs\Repository\Contracts\RepositoryContract;
 use GuardiansLabs\Repository\Exceptions\RepositoryException;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use App\User;
 
 class BaseRepository implements RepositoryContract
 {
@@ -60,8 +59,8 @@ class BaseRepository implements RepositoryContract
 
     /**
      * @param $itemId
-     * @return Collection
      * @throws RepositoryException
+     * @return Collection
      */
     public function findItemById($itemId)
     {
@@ -94,19 +93,25 @@ class BaseRepository implements RepositoryContract
     /**
      * @param $itemId
      * @return mixed
+     * @throws RepositoryException
      */
     public function delete($itemId)
     {
-        // TODO: Implement delete() method.
+        $item = $this->model->find($itemId);
+        if (!$item) {
+            throw new RepositoryException("No Item Found To delete");
+        }
+        return $item->delete();
     }
 
     /**
-     * @param $where
-     * @param array $attributes
+     * @param array $where
+     * @param array $columns
      * @return Collection
+     * @internal param array $attributes
      */
-    public function findWhere($where, $attributes = ['*'])
+    public function findWhere(array $where, $columns = ['*'])
     {
-        // TODO: Implement findWhere() method.
+        return $this->model->where($where[0], $where[1], $where[2])->get($columns);
     }
 }
