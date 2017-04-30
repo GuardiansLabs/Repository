@@ -47,12 +47,4 @@ interface RepositoryContract
      * @return mixed
      */
     public function delete($itemId);
-
-    /**
-     * @param array $where
-     * @param array $columns
-     * @return Collection
-     * @internal param array $attributes
-     */
-    public function findWhere(array $where, $columns = ['*']);
 }

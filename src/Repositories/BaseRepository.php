@@ -103,15 +103,4 @@ class BaseRepository implements RepositoryContract
         }
         return $item->delete();
     }
-
-    /**
-     * @param array $where
-     * @param array $columns
-     * @return Collection
-     * @internal param array $attributes
-     */
-    public function findWhere(array $where, $columns = ['*'])
-    {
-        return $this->model->where($where[0], $where[1], $where[2])->get($columns);
-    }
 }
