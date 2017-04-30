@@ -11,7 +11,7 @@ Repository Is A very simple implementation for Active Repository
 Via Composer
 
 ``` bash
-$ composer require GuardiansLabs/Repository
+$ composer require guardiansLabs/repository
 ```
 
 ## Usage
@@ -19,9 +19,9 @@ create your own repsitory that extend the our Base Repository and inject your mo
 
 ``` php
 use App\User;
-use GuardiansLabs\Repository\Repositories\BaseRepository;
+use GuardiansLabs\Repository\Repositories\ActiveRepository;
 
-class UserRepository extends BaseRepository
+class UserRepository extends ActiveRepository
 {
     public function __construct()
     {
@@ -40,7 +40,7 @@ Any Pull Requests are Welcome
 ## Credits
 
 - [mustafah15][link-author]
-- [contributers]
+- contributors
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
@@ -56,4 +56,3 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-code-quality]: https://scrutinizer-ci.com/g/GuardiansLabs/Repository
 [link-downloads]: https://packagist.org/packages/GuardiansLabs/Repository
 [link-author]: https://github.com/mustafah15
-[link-contributors]: ../../contributors
