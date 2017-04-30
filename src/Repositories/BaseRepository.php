@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: mustafa
- * Date: 27/04/17
- * Time: 06:57 م
- */
 
 namespace GuardiansLabs\Repository\Repositories;
 
@@ -16,7 +10,12 @@ use Illuminate\Support\Collection;
 class BaseRepository implements RepositoryContract
 {
 
+    /**
+     * The repository model.
+     * @var Model
+     */
     protected $model;
+
     /**
      * @param Model $model
      * @return object

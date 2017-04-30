@@ -15,7 +15,7 @@ $ composer require guardiansLabs/repository
 ```
 
 ## Usage
-create your own repsitory that extend the our Base Repository and inject your model
+create your own repository that extend the our ActiveRepository and inject your model
 
 ``` php
 use App\User;
