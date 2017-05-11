@@ -29,6 +29,60 @@ class UserRepository extends ActiveRepository
     }
 }
 ```
+## Avilavle methods
+
+``` php
+    
+    public function setModel(Model $model);
+
+    public function getModel();
+
+    /**
+     * @return Collection
+     */
+    public function findAll();
+    
+    /**
+     * @param $itemId
+     * @return Collection
+     */
+    public function findItemById($itemId);
+    
+    /**
+     * @param array $data
+     * @return Collection
+     */
+    public function createNew(array $data);
+    
+    /**
+     * @param $itemId
+     * @param array $data
+     * @return mixed
+     */
+    public function update($itemId, array $data);
+    
+    /**
+     * @param $itemId
+     * @return mixed
+     */
+    public function delete($itemId);
+    
+    /**
+     * @param array $where
+     * @param array $columns
+     * @internal param array $attributes
+     * @return Collection
+     */
+    public function findWhere(array $where, $columns = ['*']);
+    
+    /**
+     * @param $column
+     * @param $values
+     * @throws RepositoryException
+     * @return Collection
+     */
+    public function findWhereIn($column, $values);
+```
 
 ## Change log
 
